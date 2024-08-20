@@ -5,3 +5,6 @@ class Product(models.Model):
     price = models.IntegerField(default=0)
     description = models.CharField(max_length=200, default=" ")
     image = models.ImageField(upload_to='products/')
+
+    def __str__(self):
+        return f"{self.name}"
